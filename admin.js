@@ -73,7 +73,7 @@
   uploadZone?.addEventListener('drop', (event) => processFiles(event.dataTransfer.files));
 
   const readProperties = () => {
-    try { return JSON.parse(localStorage.getItem('lumen-properties') || '[]'); }
+    try { return JSON.parse(localStorage.getItem('inmobiliaria-properties') || '[]'); }
     catch (error) { return []; }
   };
 
@@ -104,10 +104,10 @@
     const properties = readProperties();
     properties.unshift(property);
     try {
-      localStorage.setItem('lumen-properties', JSON.stringify(properties.slice(0, 10)));
+      localStorage.setItem('inmobiliaria-properties', JSON.stringify(properties.slice(0, 10)));
     } catch (error) {
       property.image = '';
-      localStorage.setItem('lumen-properties', JSON.stringify([property, ...properties].slice(0, 10)));
+      localStorage.setItem('inmobiliaria-properties', JSON.stringify([property, ...properties].slice(0, 10)));
       showToast('La propiedad se guardó sin la foto por su tamaño.');
     }
     return property;

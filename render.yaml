@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: lumen-inmobiliaria
+    name: inmobiliaria
     runtime: static
     staticPublishPath: .
     pullRequestPreviewsEnabled: false

@@ -91,7 +91,7 @@
     if (!grid) return;
     let properties = [];
     try {
-      properties = JSON.parse(localStorage.getItem('lumen-properties') || '[]');
+      properties = JSON.parse(localStorage.getItem('inmobiliaria-properties') || '[]');
     } catch (error) {
       properties = [];
     }
