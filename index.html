@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lumen Grupo Inmobiliario: propiedades seleccionadas en Buenos Aires, Zona Norte y la Costa Atlántica.">
+  <meta property="og:title" content="Lumen Grupo Inmobiliario — Encontrá tu próximo lugar">
+  <meta property="og:description" content="Casas, departamentos e inversiones elegidas con criterio.">
+  <title>Lumen Grupo Inmobiliario</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" id="inicio">
+    <a class="brand brand--light" href="index.html" aria-label="Lumen, inicio">
+      <span class="brand-mark" aria-hidden="true"><i class="fa-solid fa-sun"></i></span>
+      <span>Lumen</span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+      <a class="active" href="#inicio">Inicio</a>
+      <a href="#propiedades">Propiedades</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#servicios">Servicios</a>
+      <a href="admin.html">Administrar</a>
+    </nav>
+
+    <a class="header-cta" href="#contacto">Hablemos <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-shade"></div>
+      <div class="hero-content fade-in">
+        <p class="eyebrow eyebrow--light"><span></span> Grupo inmobiliario · Buenos Aires</p>
+        <h1 id="hero-title">Encontrá el lugar<br>que se sienta <em>tuyo.</em></h1>
+        <p class="hero-copy">Propiedades con carácter, ubicaciones que crecen y un equipo que te acompaña de verdad.</p>
+        <div class="property-chips" role="group" aria-label="Tipo de propiedad">
+          <button class="chip active" type="button" data-type="Casa">Casas</button>
+          <button class="chip" type="button" data-type="Departamento">Departamentos</button>
+          <button class="chip" type="button" data-type="Terreno">Terrenos</button>
+        </div>
+      </div>
+
+      <form class="search-panel fade-in" id="property-search">
+        <div class="search-heading">
+          <span>Buscá tu próxima propiedad</span>
+          <small>24 oportunidades disponibles</small>
+        </div>
+        <label class="search-field">
+          <span>Operación</span>
+          <select id="operation" name="operation">
+            <option>Comprar</option>
+            <option>Alquilar</option>
+            <option>Invertir</option>
+          </select>
+        </label>
+        <label class="search-field">
+          <span>Tipo</span>
+          <select id="type" name="type">
+            <option>Casa</option>
+            <option>Departamento</option>
+            <option>Terreno</option>
+          </select>
+        </label>
+        <label class="search-field">
+          <span>Ubicación</span>
+          <select id="location" name="location">
+            <option>Todas las zonas</option>
+            <option>Nordelta</option>
+            <option>Palermo</option>
+            <option>San Isidro</option>
+            <option>Pinamar</option>
+          </select>
+        </label>
+        <label class="search-field">
+          <span>Dormitorios</span>
+          <select id="rooms" name="rooms">
+            <option>Cualquiera</option>
+            <option>1 o más</option>
+            <option>2 o más</option>
+            <option>3 o más</option>
+          </select>
+        </label>
+        <button class="search-button" type="submit"><i class="fa-solid fa-magnifying-glass"></i><span>Buscar</span></button>
+      </form>
+    </section>
+
+    <section class="properties section-pad" id="propiedades">
+      <div class="section-heading fade-in">
+        <div>
+          <p class="eyebrow"><span></span> Selección Lumen</p>
+          <h2>Propiedades para<br>vivirlas en serio.</h2>
+        </div>
+        <div class="heading-side">
+          <p>No mostramos todo. Elegimos lo que tiene sentido por ubicación, calidad y potencial.</p>
+          <a href="#property-grid" class="text-link">Ver todas <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="property-grid" id="property-grid">
+        <article class="property-card fade-in" data-type="Casa" data-location="Nordelta">
+          <div class="property-image">
+            <a href="propiedad.html" aria-label="Ver Casa del Lago"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=86" alt="Casa moderna de dos plantas con jardín" loading="lazy"><span class="property-status">En venta</span></a>
+            <button class="favorite" type="button" aria-label="Guardar propiedad"><i class="fa-regular fa-heart"></i></button>
+          </div>
+          <div class="property-info">
+            <div><p>Nordelta · Tigre</p><h3><a href="propiedad.html">Casa del Lago</a></h3></div>
+            <strong>USD 485.000</strong>
+          </div>
+          <div class="property-meta">
+            <span><i class="fa-solid fa-bed"></i> 4 dorm.</span>
+            <span><i class="fa-solid fa-bath"></i> 3 baños</span>
+            <span><i class="fa-solid fa-ruler-combined"></i> 310 m²</span>
+          </div>
+        </article>
+
+        <article class="property-card fade-in" data-type="Casa" data-location="San Isidro">
+          <div class="property-image">
+            <a href="propiedad.html" aria-label="Ver Casa Barrancas"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=86" alt="Casa contemporánea con grandes ventanales" loading="lazy"><span class="property-status property-status--new">A estrenar</span></a>
+            <button class="favorite" type="button" aria-label="Guardar propiedad"><i class="fa-regular fa-heart"></i></button>
+          </div>
+          <div class="property-info">
+            <div><p>Las Lomas · San Isidro</p><h3><a href="propiedad.html">Casa Barrancas</a></h3></div>
+            <strong>USD 398.000</strong>
+          </div>
+          <div class="property-meta">
+            <span><i class="fa-solid fa-bed"></i> 3 dorm.</span>
+            <span><i class="fa-solid fa-bath"></i> 3 baños</span>
+            <span><i class="fa-solid fa-ruler-combined"></i> 245 m²</span>
+          </div>
+        </article>
+
+        <article class="property-card fade-in" data-type="Departamento" data-location="Palermo">
+          <div class="property-image">
+            <a href="propiedad.html" aria-label="Ver Ático Botánico"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=86" alt="Interior luminoso de departamento de diseño" loading="lazy"><span class="property-status">En venta</span></a>
+            <button class="favorite" type="button" aria-label="Guardar propiedad"><i class="fa-regular fa-heart"></i></button>
+          </div>
+          <div class="property-info">
+            <div><p>Palermo Chico · CABA</p><h3><a href="propiedad.html">Ático Botánico</a></h3></div>
+            <strong>USD 275.000</strong>
+          </div>
+          <div class="property-meta">
+            <span><i class="fa-solid fa-bed"></i> 2 dorm.</span>
+            <span><i class="fa-solid fa-bath"></i> 2 baños</span>
+            <span><i class="fa-solid fa-ruler-combined"></i> 118 m²</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Resultados del grupo inmobiliario">
+      <div class="stat fade-in"><span>Propiedades vendidas</span><strong>680<sup>+</sup></strong></div>
+      <div class="stat fade-in"><span>Años en el mercado</span><strong>18<sup>+</sup></strong></div>
+      <div class="stat fade-in"><span>Clientes que nos recomiendan</span><strong>96<sup>%</sup></strong></div>
+      <div class="stat fade-in"><span>Zonas donde operamos</span><strong>12<sup>+</sup></strong></div>
+    </section>
+
+    <section class="about section-pad" id="nosotros">
+      <div class="about-image fade-in">
+        <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1400&q=86" alt="Arquitectura residencial moderna integrada con la naturaleza" loading="lazy">
+        <div class="about-seal"><i class="fa-solid fa-key"></i><span>Desde<br>2008</span></div>
+      </div>
+      <div class="about-copy fade-in">
+        <p class="eyebrow"><span></span> Otra forma de hacer inmobiliaria</p>
+        <h2>Primero escuchamos.<br>Después buscamos.</h2>
+        <p>Comprar o vender una propiedad no debería sentirse como navegar a ciegas. En Lumen combinamos conocimiento local, criterio comercial y una conversación honesta desde el primer día.</p>
+        <div class="about-points" id="servicios">
+          <div><i class="fa-solid fa-location-dot"></i><span><strong>Curaduría local</strong>Conocemos cada zona, su ritmo y su proyección.</span></div>
+          <div><i class="fa-solid fa-chart-line"></i><span><strong>Tasación precisa</strong>Decisiones basadas en datos reales del mercado.</span></div>
+          <div><i class="fa-solid fa-handshake"></i><span><strong>Acompañamiento</strong>De la primera visita hasta la entrega de llaves.</span></div>
+        </div>
+        <a class="button button--dark" href="#contacto">Conocé cómo trabajamos <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </section>
+
+    <section class="testimonial section-pad fade-in">
+      <div class="quote-mark">“</div>
+      <blockquote>Nos ayudaron a encontrar una casa que no estaba en nuestro radar, pero sí en nuestra vida.</blockquote>
+      <div class="testimonial-person">
+        <span>MC</span>
+        <p><strong>Marina y Carlos</strong>Compradores · San Isidro</p>
+      </div>
+    </section>
+
+    <section class="contact section-pad" id="contacto">
+      <div class="contact-inner fade-in">
+        <p class="eyebrow eyebrow--light"><span></span> Empecemos por una charla</p>
+        <h2>Tu próxima historia<br>puede empezar acá.</h2>
+        <p>Contanos qué estás buscando. Nosotros nos ocupamos de acercarte opciones que valgan la visita.</p>
+        <div class="contact-actions">
+          <a class="button button--lime" href="https://wa.me/5491123456789?text=Hola%20Lumen%2C%20quiero%20consultar%20por%20una%20propiedad" target="_blank" rel="noopener">Escribir por WhatsApp <i class="fa-brands fa-whatsapp"></i></a>
+          <a class="contact-phone" href="tel:+541145678900">+54&nbsp;11&nbsp;4567&nbsp;8900</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand" href="#inicio"><span class="brand-mark"><i class="fa-solid fa-sun"></i></span><span>Lumen</span></a>
+    <p>Grupo Inmobiliario · CABA y Zona Norte</p>
+    <div><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a><a href="admin.html">Panel admin</a></div>
+    <small>© <span data-current-year></span> Lumen. Todos los derechos reservados.</small>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/5491123456789?text=Hola%20Lumen%2C%20quiero%20hacer%20una%20consulta" target="_blank" rel="noopener" aria-label="Consultar por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i><span>¿Hablamos?</span>
+  </a>
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="main.js"></script>
+</body>
+</html>

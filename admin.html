@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Demo del panel administrativo de Lumen Grupo Inmobiliario.">
+  <meta property="og:title" content="Panel administrativo — Lumen">
+  <title>Panel administrativo | Lumen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="admin-page">
+  <aside class="admin-sidebar" id="admin-sidebar" aria-label="Panel de navegación administrativo">
+    <a class="brand brand--light" href="index.html"><span class="brand-mark"><i class="fa-solid fa-sun"></i></span><span>Lumen</span></a>
+    <p class="workspace-label">Espacio de trabajo</p>
+    <nav class="admin-nav" aria-label="Navegación del panel">
+      <a href="#resumen"><i class="fa-solid fa-chart-pie"></i> Resumen</a>
+      <a class="active" href="#nueva"><i class="fa-solid fa-building-circle-arrow-right"></i> Propiedades</a>
+      <a href="#consultas"><i class="fa-regular fa-message"></i> Consultas <span>8</span></a>
+      <a href="#equipo"><i class="fa-solid fa-users"></i> Equipo</a>
+      <a href="#configuracion"><i class="fa-solid fa-sliders"></i> Configuración</a>
+    </nav>
+    <div class="sidebar-help"><i class="fa-regular fa-circle-question"></i><div><strong>¿Necesitás ayuda?</strong><small>Contactá a soporte</small></div></div>
+    <a class="back-to-site" href="index.html"><i class="fa-solid fa-arrow-left"></i> Volver al sitio</a>
+  </aside>
+
+  <main class="admin-main">
+    <header class="admin-topbar">
+      <button class="admin-menu-toggle" type="button" aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
+      <div class="admin-search"><i class="fa-solid fa-magnifying-glass"></i><input type="search" placeholder="Buscar propiedades, consultas..." aria-label="Buscar en el panel"></div>
+      <div class="admin-user"><button type="button" aria-label="Notificaciones"><i class="fa-regular fa-bell"></i><span></span></button><div class="avatar">NG</div><div><strong>Nicolás Gómez</strong><small>Administrador</small></div><i class="fa-solid fa-chevron-down"></i></div>
+    </header>
+
+    <div class="admin-content">
+      <section class="admin-heading" id="resumen">
+        <div><p class="admin-kicker">Panel de gestión</p><h1>Propiedades</h1><p>Administrá las publicaciones visibles en el sitio.</p></div>
+        <button class="button button--dark" type="button" data-scroll-form><i class="fa-solid fa-plus"></i> Nueva propiedad</button>
+      </section>
+
+      <section class="admin-metrics" aria-label="Resumen de propiedades">
+        <article><div class="metric-icon metric-icon--lime"><i class="fa-solid fa-house"></i></div><div><span>Publicadas</span><strong id="published-count">24</strong><small><i class="fa-solid fa-arrow-trend-up"></i> 3 este mes</small></div></article>
+        <article><div class="metric-icon metric-icon--sand"><i class="fa-regular fa-clock"></i></div><div><span>En borrador</span><strong>6</strong><small>2 pendientes de revisión</small></div></article>
+        <article><div class="metric-icon metric-icon--blue"><i class="fa-regular fa-eye"></i></div><div><span>Visitas este mes</span><strong>3.840</strong><small><i class="fa-solid fa-arrow-trend-up"></i> 18% vs. mayo</small></div></article>
+        <article><div class="metric-icon metric-icon--rose"><i class="fa-regular fa-message"></i></div><div><span>Consultas nuevas</span><strong>8</strong><small>Requieren respuesta</small></div></article>
+      </section>
+
+      <section class="admin-card recent-properties">
+        <div class="card-heading"><div><h2>Publicaciones recientes</h2><p>Últimas propiedades creadas o editadas.</p></div><button class="filter-button" type="button"><i class="fa-solid fa-filter"></i> Filtrar</button></div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Propiedad</th><th>Operación</th><th>Precio</th><th>Estado</th><th>Visitas</th><th></th></tr></thead>
+            <tbody id="properties-table">
+              <tr><td><div class="table-property"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=180&q=80" alt="Casa del Lago"><span><strong>Casa del Lago</strong><small>Nordelta, Tigre</small></span></div></td><td>Venta</td><td>USD 485.000</td><td><span class="status-pill status-pill--live">Publicada</span></td><td>486</td><td><button type="button" aria-label="Más opciones"><i class="fa-solid fa-ellipsis"></i></button></td></tr>
+              <tr><td><div class="table-property"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=180&q=80" alt="Casa Barrancas"><span><strong>Casa Barrancas</strong><small>San Isidro</small></span></div></td><td>Venta</td><td>USD 398.000</td><td><span class="status-pill status-pill--live">Publicada</span></td><td>321</td><td><button type="button" aria-label="Más opciones"><i class="fa-solid fa-ellipsis"></i></button></td></tr>
+              <tr><td><div class="table-property"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=180&q=80" alt="Ático Botánico"><span><strong>Ático Botánico</strong><small>Palermo, CABA</small></span></div></td><td>Venta</td><td>USD 275.000</td><td><span class="status-pill status-pill--draft">Borrador</span></td><td>—</td><td><button type="button" aria-label="Más opciones"><i class="fa-solid fa-ellipsis"></i></button></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="property-form-section" id="nueva">
+        <div class="form-heading"><div><p class="admin-kicker">Nueva publicación</p><h2>Cargar propiedad</h2><p>Completá la información principal. Podrás editarla más adelante.</p></div><span class="demo-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Modo demostración</span></div>
+
+        <form id="property-form" class="admin-form">
+          <div class="form-column">
+            <section class="admin-card form-card">
+              <div class="form-card-title"><span>01</span><div><h3>Información general</h3><p>Los datos que identifican la propiedad.</p></div></div>
+              <div class="field-grid">
+                <label class="field field--full">Título de la publicación<input id="property-title" type="text" name="title" placeholder="Ej: Casa moderna con vista al lago" required></label>
+                <label class="field">Tipo de propiedad<select id="property-type" name="type" required><option value="">Seleccionar</option><option>Casa</option><option>Departamento</option><option>Terreno</option><option>Local comercial</option><option>Oficina</option></select></label>
+                <label class="field">Operación<select name="operation" required><option>Venta</option><option>Alquiler</option><option>Alquiler temporal</option></select></label>
+                <label class="field">Moneda<select name="currency"><option>USD</option><option>ARS</option></select></label>
+                <label class="field">Precio<input id="property-price" type="number" name="price" placeholder="485000" required min="1"></label>
+                <label class="field field--full">Descripción<textarea name="description" rows="5" placeholder="Contá qué hace especial a esta propiedad..."></textarea><small>Recomendamos entre 150 y 400 palabras.</small></label>
+              </div>
+            </section>
+
+            <section class="admin-card form-card">
+              <div class="form-card-title"><span>02</span><div><h3>Ubicación</h3><p>Indicá dónde se encuentra.</p></div></div>
+              <div class="field-grid">
+                <label class="field field--full">Dirección<input type="text" name="address" placeholder="Av. de los Lagos 1200"></label>
+                <label class="field">Barrio / Zona<input id="property-location" type="text" name="location" placeholder="Nordelta" required></label>
+                <label class="field">Ciudad<input type="text" name="city" placeholder="Tigre" value="Buenos Aires"></label>
+                <label class="field">Provincia<select name="province"><option>Buenos Aires</option><option>Ciudad de Buenos Aires</option><option>Córdoba</option><option>Santa Fe</option><option>Mendoza</option></select></label>
+                <label class="field">Código postal<input type="text" name="postal" placeholder="B1670"></label>
+              </div>
+            </section>
+
+            <section class="admin-card form-card">
+              <div class="form-card-title"><span>03</span><div><h3>Características</h3><p>Detalles y dimensiones.</p></div></div>
+              <div class="field-grid field-grid--three">
+                <label class="field">Dormitorios<input id="property-bedrooms" type="number" name="bedrooms" min="0" placeholder="4"></label>
+                <label class="field">Baños<input id="property-bathrooms" type="number" name="bathrooms" min="0" placeholder="3"></label>
+                <label class="field">Cocheras<input type="number" name="garages" min="0" placeholder="2"></label>
+                <label class="field">Superficie cubierta<input id="property-area" type="number" name="area" min="0" placeholder="310"><span class="input-suffix">m²</span></label>
+                <label class="field">Superficie total<input type="number" name="totalArea" min="0" placeholder="890"><span class="input-suffix">m²</span></label>
+                <label class="field">Antigüedad<input type="number" name="age" min="0" placeholder="3"><span class="input-suffix">años</span></label>
+              </div>
+              <fieldset class="features-fieldset"><legend>Comodidades</legend><div class="checkbox-grid"><label><input type="checkbox" name="feature-piscina" value="Piscina"><span><i class="fa-solid fa-water-ladder"></i> Piscina</span></label><label><input type="checkbox" name="feature-parrilla" value="Parrilla"><span><i class="fa-solid fa-fire-burner"></i> Parrilla</span></label><label><input type="checkbox" name="feature-jardin" value="Jardín"><span><i class="fa-solid fa-tree"></i> Jardín</span></label><label><input type="checkbox" name="feature-seguridad" value="Seguridad"><span><i class="fa-solid fa-shield-halved"></i> Seguridad</span></label></div></fieldset>
+            </section>
+
+            <section class="admin-card form-card">
+              <div class="form-card-title"><span>04</span><div><h3>Fotos</h3><p>La primera imagen será la portada.</p></div></div>
+              <label class="upload-zone" id="upload-zone">
+                <input id="property-images" type="file" name="images" accept="image/*" multiple>
+                <i class="fa-regular fa-images"></i>
+                <strong>Arrastrá tus fotos acá</strong>
+                <span>o hacé clic para elegir archivos</span>
+                <small>JPG, PNG o WEBP · Máximo 10 MB por imagen</small>
+              </label>
+              <div class="upload-preview" id="upload-preview"></div>
+            </section>
+          </div>
+
+          <aside class="publish-column" aria-label="Opciones de publicación y vista previa">
+            <section class="admin-card publish-card">
+              <h3>Publicación</h3>
+              <div class="publish-row"><span>Estado</span><strong id="publish-status">Borrador</strong></div>
+              <div class="publish-row"><span>Visibilidad</span><strong>Pública</strong></div>
+              <label class="toggle-row"><span><strong>Propiedad destacada</strong><small>Mostrar primero en el inicio</small></span><input type="checkbox" name="featured"><i></i></label>
+              <button class="button button--dark button--full" type="submit"><i class="fa-solid fa-cloud-arrow-up"></i> Publicar propiedad</button>
+              <button class="secondary-button" type="button" id="save-draft">Guardar borrador</button>
+              <p class="autosave"><i class="fa-solid fa-check"></i> Los cambios se guardan localmente.</p>
+            </section>
+
+            <section class="admin-card live-preview">
+              <div class="preview-label"><span>Vista previa</span><i class="fa-regular fa-eye"></i></div>
+              <div class="preview-image" id="preview-image"><i class="fa-regular fa-image"></i><span>Portada</span></div>
+              <div class="preview-copy"><small id="preview-location">Ubicación</small><h3 id="preview-title">Título de la propiedad</h3><strong id="preview-price">USD —</strong><div><span><i class="fa-solid fa-bed"></i> <b id="preview-bedrooms">—</b></span><span><i class="fa-solid fa-bath"></i> <b id="preview-bathrooms">—</b></span><span><i class="fa-solid fa-ruler-combined"></i> <b id="preview-area">—</b> m²</span></div></div>
+            </section>
+          </aside>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <div class="success-modal" id="success-modal" role="dialog" aria-modal="true" aria-labelledby="success-title" hidden>
+    <div><span class="success-icon"><i class="fa-solid fa-check"></i></span><h2 id="success-title">¡Propiedad publicada!</h2><p>La nueva publicación ya está disponible en la landing de demostración.</p><div><a class="button button--dark" href="index.html#propiedades">Ver en el sitio</a><button class="secondary-button" type="button" data-close-modal>Cargar otra</button></div></div>
+  </div>
+  <a class="whatsapp-float whatsapp-float--admin" href="https://wa.me/5491123456789?text=Hola%20Lumen%2C%20necesito%20ayuda%20con%20el%20panel" target="_blank" rel="noopener" aria-label="Soporte por WhatsApp"><i class="fa-brands fa-whatsapp"></i><span>Soporte</span></a>
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="admin.js"></script>
+</body>
+</html>

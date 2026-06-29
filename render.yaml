@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: lumen-inmobiliaria
+    runtime: static
+    staticPublishPath: .
+    pullRequestPreviewsEnabled: false
+
+    # Render Free tier: no build step is needed for plain HTML/CSS/JS
+    buildCommand: ""
+
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: "public, max-age=3600"
+      - path: "/*.css"
+        name: Cache-Control
+        value: "public, max-age=86400"
+      - path: "/*.js"
+        name: Cache-Control
+        value: "public, max-age=86400"
